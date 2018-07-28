@@ -1,0 +1,107 @@
+.process{
+    //BOX STYLING
+    padding-top: 15rem;
+    padding-bottom: 35rem;
+    position: relative;
+    @include mobile{
+        padding-top: 15rem;
+    padding-bottom: 10rem;
+    }
+    @include tablet{
+            padding-top: 15rem;
+    padding-bottom: 5rem;
+        }
+    @include tablet2{
+            padding-top: 15rem;
+    padding-bottom: 0rem;
+        }
+    
+    &__bg{
+        position: absolute;
+        bottom: 2%;
+        right: 2%;
+        z-index: 5;
+        width: 35%;
+        height: auto;
+        @include mobile{
+            display: none;
+        }
+        @include tablet{
+            display: none;
+        }
+        @include large-desktop{
+            display: none;
+        }
+    }
+    
+    &__heading{
+        //BOX STYLING
+        margin-bottom: 8rem;
+        //TEXT STYLING
+        color:#3c3950;
+        text-align: center;
+        font-size: 6rem;
+        font-weight: 200;
+    }
+    
+    
+    &__card{
+        
+        //BOX STYLING
+        position: relative;
+        padding: 5rem 4rem;
+        flex:1;
+        
+    }
+    
+    
+    &__card__number{
+        //BOX
+        top:2%;
+        left:2%;
+        position: absolute;
+        z-index: 1;
+        //TEXT STYLING
+        font-size:2.5rem;
+        color:black;
+        &::after{
+            z-index: -1;
+            content: ' ';
+            background-color: white;
+            box-shadow: 0 0 5px rgba(0,0,0,.1);
+            position: absolute;
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+    
+    
+    &__card__title{
+        //BOX
+        margin-bottom: 2rem;
+        //TEXT
+        text-align: center;
+        font-size: 2.3rem;
+        font-weight: 500;
+    }
+    
+    
+    &__card__text{
+        //TEXT
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+        text-align: center;
+        //BOX
+        margin-bottom: 1rem;
+    }
+    
+    //individual styling
+    &__card:nth-of-type(1){background-color: #eef0f1;}
+    &__card:nth-of-type(2){background-color: #e8ebed;}
+    &__card:nth-of-type(3){background-color: #dfe5e8;}
+    
+}

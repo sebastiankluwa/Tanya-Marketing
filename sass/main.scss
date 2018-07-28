@@ -1,0 +1,16 @@
+﻿@import "Abstracts/variables";
+@import "Abstracts/mixins";
+@import "Abstracts/functions";
+
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+@import "base/animations";
+
+@import "components/navbar";
+
+@import "layout/header";
+@import "layout/criterias";
+@import "layout/process";
+@import "layout/facebook";
+@import "layout/footer";

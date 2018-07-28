@@ -1,0 +1,181 @@
+.header{
+    
+}
+#headertext{
+    height: 100vh;
+    width: 100vw;
+}
+.fullview{
+    z-index: 0;
+    position: relative;
+    min-height: 100vh;
+    width:100%;
+    text-align: center;
+    background-image: /*linear-gradient(175.7deg, rgba(83, 105, 118,.4) 0%, rgba(41, 46, 73,.4) 100%),*/ url(../img/header-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    //typography
+    color:white;
+    font-size:7rem;
+    text-transform: uppercase;
+    line-height: 10rem;
+    @include mobile{
+        font-size: 4rem;
+        line-height: 6rem;
+    }
+    &__title{
+        font-weight: 700;
+    }
+    &__subtitle{
+        font-size:3rem;
+        font-weight: 200;
+        line-height: 8rem;
+        @include mobile{
+        font-size: 5rem;
+            line-height: 4rem;
+            margin-bottom: 2rem;
+    }
+    }
+    &__center{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        width: 70vw;
+        @include mobile{
+            width: 90vw;
+        }
+    }
+}
+
+.services{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include mobile{
+        flex-direction: column;
+        
+    }
+    @include tablet{
+         flex-direction: column;   
+        }
+    
+    //
+    margin-top:10rem;
+    margin-bottom:10rem;
+    &__left{
+        flex:1;
+        box-sizing: border-box;
+        padding-right: 2vw;
+        position: relative;
+        @include mobile{
+            flex-basis: 250px;
+            margin-bottom: 3rem;
+        }
+        @include tablet{
+         flex-basis: 250px;
+            margin-bottom: 3rem;
+        }
+        
+    }
+    &__list{
+        z-index: 3;
+        transform: scale(1);
+        flex:1.5;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 25vw;
+        perspective: 500px;
+        perspective-origin: 200% 100%;
+    }
+    &__item{
+        backface-visibility: hidden;
+        box-shadow: 3px 3px 5px rgba(0,0,0,.2);
+        margin: .5rem;
+        transform: skew(-15deg);
+        @include mobile{
+            transform: none;
+        }
+        @include tablet{
+         transform: none;   
+        }
+        cursor: default;
+        //text
+        font-weight: 200;
+        text-align: center;
+        padding: 1rem 1rem;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        letter-spacing: .1rem;
+        //
+        
+        position: relative;
+        
+        min-height: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex:1 1 15rem;
+        width: 32.5%;
+        height: auto;
+        background-color: #e8ebed;
+        transition: all .3s;
+        
+        &:nth-of-type(2n){background-color: #eef0f1;}
+        &:nth-of-type(2),&:last-of-type{background-color: #dfe5e8;}
+        
+        
+        &:hover{
+            background-color: #3c3950;
+            transform: skew(-15deg) translateZ(5px);
+            box-shadow: 8px 8px 5px rgba(0,0,0,.2);
+            @include mobile{
+            transform: none;
+        }
+            @include tablet{
+         transform: none;   
+        }
+        
+        }
+        &:hover &__icon, &:hover &__text{color:white;}
+        
+        
+        &__text{
+            //margin-: 1.5rem;
+        }
+        &__icon{
+            box-sizing: border-box;
+            margin-bottom: 2rem;
+            font-size: 4.5rem;
+            color: #3c3950;
+        }
+    }
+    &__heading{
+        
+        text-transform: uppercase;
+        font-weight: 200;
+        display: block;
+        font-size: 5rem;
+        display: inline-block;
+        line-height: 10rem;
+        margin-bottom: 3rem;
+    }
+    &__heading::after{
+        content:' ';
+        display: block;
+        width: 13rem;
+        height: .2rem;
+        background-color: #3c3950;
+    }
+    &__subheading{
+        line-height: 2.5rem;
+        display: inline-block;
+        padding-right: 13rem;
+        font-size: 1.5rem;
+        
+    }
+}
